@@ -2,10 +2,12 @@
 
 @keyframes loadInContent {
     0% {
-        transform: translateY(-50%);
+        filter: blur(4px);
+        transform: translateY(-75%);
         color: rgba($color: $mainFontColor, $alpha: 0);
     }
     100% {
+        filter: blur(0);
         transform: translateY(0);
         color: rgba($color: $mainFontColor, $alpha: 1);
     }

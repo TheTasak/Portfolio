@@ -1,4 +1,24 @@
+@import '../../variables.scss';
+
 .about {
     padding-top: 2000px;
     background-color: rgb(49, 10, 56);
+
+    .content-center {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        row-gap: 1rem;
+
+        text-align: center;
+        color: $mainFontColor;
+        font-size: 3rem;
+    }
+    .hidden {
+        opacity: 0;
+        transition: 2s all ease-out;
+    }
+    .hidden.show {
+        opacity: 1;
+    }
 }
