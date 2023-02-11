@@ -7,7 +7,7 @@ import { scrollInto } from "../Utilities/Utilities";
 const Header = () => {
 
     return (
-        <div className="header">
+        <div className="header box-center">
             <div className="content-center">
                 <div className="text-main">Przemysław Tasarz</div>
                 <div className="text-sub">Full-Stack Developer</div>

@@ -1,7 +1,32 @@
+@import './variables.scss';
+
 body {
   margin: 0;
 
   .App {
     width: 100%;
+  }
+  .box-center {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+    align-content: center;
+    justify-content: center;
+  }
+  .content-center {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    row-gap: 1rem;
+
+    text-align: center;
+    color: $mainFontColor;
+    font-size: 3rem;
+  }
+
+  .hidden {
+    opacity: 0;
   }
 }

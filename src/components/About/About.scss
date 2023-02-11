@@ -1,24 +1,37 @@
 @import '../../variables.scss';
 
 .about {
-    padding-top: 2000px;
-    background-color: rgb(49, 10, 56);
+    min-height: 100vh;
+    padding-top: 4rem;
+    background-color: #1a051e;
 
-    .content-center {
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        row-gap: 1rem;
-
-        text-align: center;
-        color: $mainFontColor;
-        font-size: 3rem;
-    }
     .hidden {
-        opacity: 0;
-        transition: 2s all ease-out;
+        transform: translateX(-25%);
+        transition: 2s all ease-in-out;
     }
     .hidden.show {
+        transform: translateX(0);
         opacity: 1;
+    }
+
+    .text-header {
+        text-align: left;
+        font-family: 'Montserrat';
+        font-size: 0.75em;
+    }
+
+    .content {
+        column-count: 2;
+        column-gap: 10px;
+
+        .description {
+            font-family: 'Montserrat';
+            font-weight: 400;
+            font-size: 0.35em;
+            text-align: left;
+            letter-spacing: 0.01em;
+            line-height: 1.5em;
+            padding: 0 50px;
+        }
     }
 }
