@@ -21,8 +21,9 @@
     }
 
     .content {
-        column-count: 2;
-        column-gap: 10px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
 
         .description {
             font-family: 'Montserrat';
