@@ -1,0 +1,28 @@
+.navbar {
+    transition: 0.5s opacity ease-in-out;
+
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    
+    width: min(50%, 60px);
+    
+    overflow-x: hidden;
+
+    z-index: 1;
+
+    .background {
+        position: fixed;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        transition: 0.5s opacity ease-in-out;
+        opacity: 0;
+        width: 50px;
+        background-color: rgba(26, 4, 36, 0.5);
+    }
+    .background.hovered {
+        opacity: 1;
+    }
+}

@@ -14,14 +14,16 @@ const About = () => {
                         <br></br>
                         Morbi eu purus et leo venenatis convallis nec ac ipsum. Fusce suscipit neque nec mi tincidunt, vitae maximus nibh consequat. Sed tincidunt semper diam tristique congue. Pellentesque sed leo vel ante elementum suscipit. Ut a nulla erat.
                     </div>
-                    <Icon icon={faJs} title="Javascript"/>
-                    <Icon icon={faReact} title="React"/>
-                    <Icon icon={faGitAlt} title="Git"/>
-                    <Icon icon={faCss3Alt} title="Css"/>
-                    <Icon icon={faSass} title="Sass"/>
-                    <Icon icon={faFigma} title="Figma"/>
-                    <Icon icon={faPhp} title="PHP"/>
-                    <Icon icon={faLinux} title="Linux"/>
+                    <div className="icons">
+                        <Icon icon={faJs} title="Javascript"/>
+                        <Icon icon={faReact} title="React"/>
+                        <Icon icon={faGitAlt} title="Git"/>
+                        <Icon icon={faCss3Alt} title="Css"/>
+                        <Icon icon={faSass} title="Sass"/>
+                        <Icon icon={faFigma} title="Figma"/>
+                        <Icon icon={faPhp} title="PHP"/>
+                        <Icon icon={faLinux} title="Linux"/>
+                    </div>
                 </div>
             </div>
         </div>
