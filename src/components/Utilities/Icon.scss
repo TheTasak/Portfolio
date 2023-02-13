@@ -7,12 +7,12 @@
     justify-content: center;
     align-content: center;
 
-    width: clamp(55px, 4.5vw, 200px);
-    height: clamp(55px, 4.5vw, 200px);
+    width: clamp(60px, 4.5vw, 70px);
+    height: clamp(60px, 4.5vw, 70px);
     border-radius: 10px;
     background-color: rgba($color: #9b9b9b, $alpha: 0.2);
 
-    font-size: clamp(28px, 1.7rem, 50px);
+    font-size: clamp(40px, 2rem, 50px);
     cursor: pointer;
 
     svg {

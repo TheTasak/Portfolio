@@ -7,9 +7,9 @@ const Navbar = () => {
     const getMousePosition = () => {
         let e : any = window.event;
         let posX : number = e.clientX;
-        if (posX < 10) {
+        if (posX < 20) {
             setShowNavbar(true);
-        } else if (posX > 55) {
+        } else if (posX > 50) {
             setShowNavbar(false);
         }
     }
