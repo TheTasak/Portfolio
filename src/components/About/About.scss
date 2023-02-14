@@ -8,6 +8,10 @@
     background-repeat: no-repeat;
     background-size: cover;
 
+    .content-center {
+        padding-top: 5vh;
+    }
+
     .hidden {
         transition: 2s transform ease-in-out, 2s opacity ease-in-out;
         transform: translateX(-25%);
@@ -27,6 +31,8 @@
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
+        column-gap: 5vw;
+        row-gap: 5vh;
 
         .description {
             width: max(50%, 500px);
@@ -37,6 +43,10 @@
             font-size: clamp(16px, 0.3em, 22px);
             letter-spacing: 0.01em;
             line-height: 1.5em;
+
+            span {
+                white-space: pre-line;
+            }
         }
 
         .icons {
