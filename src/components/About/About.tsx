@@ -9,10 +9,17 @@ const About = () => {
             <div className="content-center">
                 <div className="text-header hidden">About me</div>
                 <div className="content hidden">
-                    <div className="description">Hello!<br></br>
-                        Nullam vitae enim id est semper tincidunt id in urna. Donec sit amet diam nunc. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam lobortis, nibh sed sagittis varius, quam turpis iaculis risus, eu suscipit erat dui sed mauris. Duis sagittis rutrum massa sit amet euismod. Fusce iaculis, mi ut viverra vehicula, massa est efficitur augue, nec convallis elit diam ac lectus. Nunc rutrum sit amet nisl ut vestibulum. Aliquam ac metus ac neque gravida congue luctus viverra massa.
-                        <br></br>
-                        Morbi eu purus et leo venenatis convallis nec ac ipsum. Fusce suscipit neque nec mi tincidunt, vitae maximus nibh consequat. Sed tincidunt semper diam tristique congue. Pellentesque sed leo vel ante elementum suscipit. Ut a nulla erat.
+                    <div className="description">
+                        <span>
+                            {
+                                "Hey!\n I'm Przemek, a passionate 20-year old student that is interested in anything remotely associated with computers and technology. " +
+                                "Recently, after a rocky and turbulent journey with different programming languages I dipped my toes into web development and fell in love with it. " + 
+                                "After gaining some experience, now I'm searching for a job in this exact field.\n" +
+                                "\nMy other interests:"
+                            }
+                            <li>Investing and finance</li>
+                            <li>Fantasy and Sci-Fi literature</li>
+                        </span>
                     </div>
                     <div className="icons">
                         <Icon icon={faJs} title="Javascript"/>

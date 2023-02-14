@@ -41,6 +41,7 @@
         flex-direction: column;
         align-content: center;
         row-gap: 1rem;
+        margin: 0 3vw;
 
         text-align: center;
         color: $mainFontColor;
@@ -48,14 +49,14 @@
 
         .text-main {
             animation: 1s ease-in-out 0s 1 loadInContentLeft;
-            font-size: 3.2rem;
+            font-size: 4rem;
             letter-spacing: 0.3rem;
             font-weight: 500;
             text-shadow: 2px 2px 8px $textShadowColor;
         }
         .text-sub {
             animation: 1.2s ease-in-out 0s 1 loadInContentRight;
-            font-size: 2rem;
+            font-size: 2.5rem;
             letter-spacing: 0.2rem;
             font-weight: 200;
             text-shadow: 2px 2px 6px $textShadowColor;
@@ -84,7 +85,7 @@
 
         svg {
             margin-left: 0.5em;
-            font-size: clamp(36px, 5vw, 48px);
+            font-size: clamp(45px, 5vw, 60px);
             cursor: pointer;
             transition: 0.5s color ease-out;
 
