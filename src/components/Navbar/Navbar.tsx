@@ -17,7 +17,6 @@ const Navbar = () => {
     return (
         <div className='navbar' onMouseMove={getMousePosition}>
             <div className={"background" + (showNavbar ? " hovered" : "")}>
-
             </div>
         </div>
     )

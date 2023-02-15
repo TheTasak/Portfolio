@@ -2,7 +2,8 @@
 
 .about {
     min-height: 100vh;
-    padding: 3rem 2.5rem;
+    padding: 8rem 2.5rem;
+    color: $mainFontColor;
     
     background: url("../../assets/waves2.svg");
     background-repeat: no-repeat;
@@ -10,21 +11,7 @@
 
     .content-center {
         padding-top: 5vh;
-    }
-
-    .hidden {
-        transition: 2s transform ease-in-out, 2s opacity ease-in-out;
-        transform: translateX(-25%);
-    }
-    .hidden.show {
-        transform: translateX(0);
-        opacity: 1;
-    }
-
-    .text-header {
-        text-align: left;
-        font-family: 'Poppins';
-        font-size: 0.5em;
+        padding-left: 5vw;
     }
 
     .content {
@@ -40,29 +27,105 @@
             text-align: left;
             font-family: 'Montserrat';
             font-weight: 400;
-            font-size: clamp(16px, 0.3em, 22px);
-            letter-spacing: 0.01em;
-            line-height: 1.5em;
+            font-size: clamp(16px, 0.28em, 22px);
+            letter-spacing: 0.05em;
+            line-height: 1.6em;
 
             span {
                 white-space: pre-line;
             }
+
+            .text-header {
+                text-align: left;
+                font-family: 'Poppins';
+                font-size: clamp(24px, 2em, 36px);
+                margin-bottom: 1.5em;
+            }
+
+            &.hidden {
+                transition: 1s opacity ease-in-out 1s, 1s transform ease-in-out 1s, 1s filter ease-in-out 1s;
+                transform: translateX(-25%);
+                filter: blur(4px);
+            }
+            &.hidden.show {
+                transform: translateX(0);
+                filter: blur(0);
+            }
+        }
+        .icons {
+            width: max(50%, 500px);
+
+            .icon-group {
+                width: 100%;
+                height: fit-content;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-content: flex-start;
+                row-gap: 0.2em;
+                column-gap: 0.2em;
+                padding: 0.3em 0 0.4em 0;
+
+            }
+            @for $i from 1 to 10 {
+                .icon-group-heading:nth-child(#{$i}) {
+                    &.hidden {
+                        transition: 1s opacity ease-in-out 1s + $i * 0.5s, 1.1s filter ease-in-out 1s + $i * 0.5s;
+                        filter: blur(4px);
+                    }
+                    &.hidden.show {
+                        filter: blur(0);
+                    }
+                }
+                @for $j from 1 to 10 {
+                    .icon-group:nth-child(#{$i}) {
+                        .icon:nth-child(#{$j}) {
+                            &.hidden {
+                                transition: 1s opacity ease-in-out 1s + $i * 0.5s + $j * 0.25s, 1.1s filter ease-in-out 1s + $i * 0.5s + $j * 0.25s;
+                                filter: blur(4px);
+                            }
+                            &.hidden.show {
+                                filter: blur(0);
+                            }
+                        }
+                    }
+                }
+            }
+            .icon-group-heading {
+                font-size: clamp(20px, 0.4em, 26px);
+                letter-spacing: 0.05em;
+
+                &.hidden {
+                    transition: 1s opacity ease-in-out 1s, 1s transform ease-in-out 1s;
+                    transform: translateX(-25%);
+                }
+                &.hidden.show {
+                    transform: translateX(0);
+                }
+            }
         }
 
-        .icons {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-content: flex-start;
-            row-gap: 0.2em;
-            column-gap: 0.2em;
-        }
+    }
+
+    .experience {
+        padding: 0 5vw;
+        margin-top: 10vh;
+        font-family: 'Montserrat';
     }
 
     @media (max-width: 800px) {
+        .content-center {
+            padding-left: 0;
+        }
         .content {
             flex-wrap: wrap;
+            .description {
+                text-align: justify;
+            }
+            .description, .icons {
+                width: 100%;
+            }
         }
     }
 }

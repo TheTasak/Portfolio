@@ -2,10 +2,6 @@
     transition: 0.4s background-color ease-in-out;
 
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
 
     width: clamp(60px, 4.5vw, 70px);
     height: clamp(60px, 4.5vw, 70px);
@@ -16,6 +12,10 @@
     cursor: pointer;
 
     svg {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
         transition: 0.5s transform ease-in-out;
     }
 
@@ -36,7 +36,7 @@
     &:hover {
         background-color: rgba($color: #9b9b9b, $alpha: 0.25);
         svg {
-            transform: scale(80%) translateY(-25%);
+            transform: scale(80%) translate(-60%, -75%);
         }
         .text {
             transform: translateX(-50%) translateY(0%) scale(100%);
