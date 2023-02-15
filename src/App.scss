@@ -29,4 +29,7 @@ body {
   .hidden {
     opacity: 0;
   }
+  .hidden.show {
+    opacity: 1;
+  }
 }
