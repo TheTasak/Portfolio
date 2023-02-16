@@ -1,6 +1,17 @@
+import Icon from "../Utilities/Icon";
 import "./Experience.scss";
 
-const Experience = ({data}: {data: any}) => {
+interface ExperienceData {
+    id: number,
+    position: string,
+    company: string,
+    started: string,
+    finished: string,
+    description: string,
+    technologies: string[]
+}
+
+const Experience = ({data}: {data: ExperienceData}) => {
     const createDates = () => {
         const startDate = new Date(data.started);
         const endDate = data.finished ? new Date(data.finished) : null;
@@ -17,12 +28,16 @@ const Experience = ({data}: {data: any}) => {
     }
 
     return (
-        <div className="experience">
+        <div className="experience-card">
             <div>{data.position}</div>
             <div>{createDates()}</div>
             <div>{data.company}</div>
             <div>{data.description}</div>
-            <div>{data.technologies}</div>
+            <div className="icons">
+                <div className="icon-group">
+                    {data.technologies.map((technology, index) => <Icon icon={technology} key={Date.now() + index} />)}
+                </div>
+            </div>
         </div>
     )
 }

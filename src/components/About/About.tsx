@@ -1,5 +1,4 @@
 import "./About.scss";
-import { faGitAlt, faReact, faJs, faPhp, faFigma, faSass, faLinux, faCss3Alt } from '@fortawesome/free-brands-svg-icons';
 import Icon from "../Utilities/Icon";
 import Experience from "./Experience";
 
@@ -63,26 +62,27 @@ const About = () => {
                             Frontend
                         </div>
                         <div className="icon-group">
-                            <Icon icon={faJs} title="Javascript"/>
-                            <Icon icon={faReact} title="React"/>
-                            <Icon icon={undefined} title="Redux"/>
-                            <Icon icon={faCss3Alt} title="Css"/>
-                            <Icon icon={faSass} title="Sass"/>
+                            <Icon icon="Javascript"/>
+                            <Icon icon="React"/>
+                            <Icon icon="Redux"/>
+                            <Icon icon="Css"/>
+                            <Icon icon="Sass"/>
                         </div>
                         <div className="icon-group-heading hidden">
                             Backend
                         </div>    
                         <div className="icon-group">
-                            <Icon icon={faPhp} title="PHP"/>
-                            <Icon icon={undefined} title="Rails"/>
+                            <Icon icon="PHP"/>
+                            <Icon icon="Rails"/>
+                            <Icon icon="RSpec"/>
                         </div>
                         <div className="icon-group-heading hidden">
                             Miscellaneous
                         </div>   
                         <div className="icon-group">
-                            <Icon icon={faFigma} title="Figma"/>
-                            <Icon icon={faGitAlt} title="Git"/>
-                            <Icon icon={faLinux} title="Linux"/>
+                            <Icon icon="Figma"/>
+                            <Icon icon="Git"/>
+                            <Icon icon="Linux"/>
                         </div>
                     </div>
                 </div>

@@ -77,9 +77,9 @@
         animation: 1.3s ease-out 0s 1 loadInContentRight;
 
         position: absolute;
-        bottom: 0%;
-        right: 0%;
-        padding: clamp(10px, 0.4vw, 20px) clamp(15px, 1.5vw, 30px);
+        bottom: 0;
+        right: 0;
+        padding: clamp(15px, 0.4vw, 25px) clamp(20px, 1.5vw, 40px);
 
         color: $mainFontColor;
 

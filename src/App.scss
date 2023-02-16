@@ -32,4 +32,21 @@ body {
   .hidden.show {
     opacity: 1;
   }
+  .icons {
+    width: max(50%, 500px);
+
+    .icon-group {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: flex-start;
+        row-gap: 0.2em;
+        column-gap: 0.2em;
+        padding: 0.3em 0 0.4em 0;
+
+    }
+  }
 }
