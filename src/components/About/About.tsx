@@ -1,5 +1,4 @@
 import "./About.scss";
-import { faGitAlt, faReact, faJs, faPhp, faFigma, faSass, faLinux, faCss3Alt } from '@fortawesome/free-brands-svg-icons';
 import Icon from "../Utilities/Icon";
 import Experience from "./Experience";
 
@@ -27,10 +26,10 @@ const experienceData =
         position: "Junior Business Systems Specialist",
         company: "Adamed Pharma S.A.",
         started: "2022-06-01T00:00:00.000Z",
-        finished: "2023-10-01T00:00:00.000Z",
+        finished: "2022-10-01T00:00:00.000Z",
         description: "lorem ipsum",
         technologies: [
-            "Php", "Javascript", "OracleSQL", "Css"
+            "PHP", "Javascript", "SQL", "Css"
         ]
     },
     {
@@ -39,7 +38,7 @@ const experienceData =
         company: "Ibac sp. z o.o.",
         started: "2020-11-01T00:00:00.000Z",
         finished: "2022-04-01T00:00:00.000Z",
-        description: "lorem ipsum",
+        description: "Created online store websites using Shopify and wrote for them custom plugins, also",
         technologies: []
     }
 ];
@@ -47,52 +46,53 @@ const experienceData =
 const About = () => {
 
     return (
-        <div className="about" id="about">
+        <section className="about" id="about">
             <div className="content-center">
                 <div className="content">
                     <div className="description hidden">
-                        <div className="text-header">About me</div>
+                        <h3 className="text-header">About me</h3>
                         <span>
                             {aboutDescription}
                             <li>Investing and finance</li>
                             <li>Fantasy and Sci-Fi literature</li>
                         </span>
                     </div>
-                    <div className="icons">
-                        <div className="icon-group-heading hidden">
+                    <div className="icons hidden">
+                        <h5 className="icon-group-heading">
                             Frontend
-                        </div>
+                        </h5>
                         <div className="icon-group">
-                            <Icon icon={faJs} title="Javascript"/>
-                            <Icon icon={faReact} title="React"/>
-                            <Icon icon={undefined} title="Redux"/>
-                            <Icon icon={faCss3Alt} title="Css"/>
-                            <Icon icon={faSass} title="Sass"/>
+                            <Icon icon="Javascript"/>
+                            <Icon icon="React"/>
+                            <Icon icon="Redux"/>
+                            <Icon icon="Css"/>
+                            <Icon icon="Sass"/>
                         </div>
-                        <div className="icon-group-heading hidden">
+                        <h5 className="icon-group-heading">
                             Backend
-                        </div>    
+                        </h5>    
                         <div className="icon-group">
-                            <Icon icon={faPhp} title="PHP"/>
-                            <Icon icon={undefined} title="Rails"/>
+                            <Icon icon="PHP"/>
+                            <Icon icon="Rails"/>
+                            <Icon icon="RSpec"/>
                         </div>
-                        <div className="icon-group-heading hidden">
+                        <h5 className="icon-group-heading">
                             Miscellaneous
-                        </div>   
+                        </h5>   
                         <div className="icon-group">
-                            <Icon icon={faFigma} title="Figma"/>
-                            <Icon icon={faGitAlt} title="Git"/>
-                            <Icon icon={faLinux} title="Linux"/>
+                            <Icon icon="Figma"/>
+                            <Icon icon="Git"/>
+                            <Icon icon="Linux"/>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="experience">
+            <div className="experience-group">
                 {
                     experienceData.map(experience => <Experience key={experience.id} data={experience} />)
                 }
             </div>
-        </div>
+        </section>
     )
 }
 

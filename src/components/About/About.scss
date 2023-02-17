@@ -11,7 +11,7 @@
 
     .content-center {
         padding-top: 5vh;
-        padding-left: 5vw;
+        padding-left: 4vw;
     }
 
     .content {
@@ -38,7 +38,7 @@
             .text-header {
                 text-align: left;
                 font-family: 'Poppins';
-                font-size: clamp(24px, 2em, 36px);
+                font-size: clamp(26px, 2em, 42px);
                 margin-bottom: 1.5em;
             }
 
@@ -54,64 +54,59 @@
         }
         .icons {
             width: max(50%, 500px);
-
-            .icon-group {
-                width: 100%;
-                height: fit-content;
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-content: flex-start;
-                row-gap: 0.2em;
-                column-gap: 0.2em;
-                padding: 0.3em 0 0.4em 0;
-
-            }
-            @for $i from 1 to 10 {
-                .icon-group-heading:nth-child(#{$i}) {
-                    &.hidden {
-                        transition: 1s opacity ease-in-out 1s + $i * 0.5s, 1.1s filter ease-in-out 1s + $i * 0.5s;
+            padding-right: 3vw;
+            margin-top: 0.5em;
+            &.hidden {
+                @for $i from 1 to 8 {
+                    .icon-group-heading:nth-child(#{$i}) {
+                        transition: 1s opacity ease-in-out 1s + $i * 1s, 1.1s filter ease-in-out 1s + $i * 1s;
+                        opacity: 0;
                         filter: blur(4px);
                     }
-                    &.hidden.show {
-                        filter: blur(0);
-                    }
-                }
-                @for $j from 1 to 10 {
-                    .icon-group:nth-child(#{$i}) {
-                        .icon:nth-child(#{$j}) {
-                            &.hidden {
-                                transition: 1s opacity ease-in-out 1s + $i * 0.5s + $j * 0.25s, 1.1s filter ease-in-out 1s + $i * 0.5s + $j * 0.25s;
+                    @for $j from 1 to 8 {
+                        .icon-group:nth-child(#{$i}) {
+                            .icon:nth-child(#{$j}) {
+                                transition: 1s opacity ease-in-out 1s + $i * 1s + $j * 0.25s, 1.1s filter ease-in-out 1s + $i * 1s + $j * 0.25s;
+                                opacity: 0;
                                 filter: blur(4px);
                             }
-                            &.hidden.show {
+                        }
+                    }
+                }
+            }
+            &.hidden.show {
+                @for $i from 1 to 8 {
+                    .icon-group-heading:nth-child(#{$i}) {
+                        filter: blur(0);
+                        opacity: 1;
+                    }
+                    @for $j from 1 to 8 {
+                        .icon-group:nth-child(#{$i}) {
+                            .icon:nth-child(#{$j}) {
+                                opacity: 1;
                                 filter: blur(0);
                             }
                         }
                     }
                 }
             }
+           
             .icon-group-heading {
                 font-size: clamp(20px, 0.4em, 26px);
                 letter-spacing: 0.05em;
-
-                &.hidden {
-                    transition: 1s opacity ease-in-out 1s, 1s transform ease-in-out 1s;
-                    transform: translateX(-25%);
-                }
-                &.hidden.show {
-                    transform: translateX(0);
-                }
             }
         }
 
     }
 
-    .experience {
+    .experience-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         padding: 0 5vw;
         margin-top: 10vh;
         font-family: 'Montserrat';
+
     }
 
     @media (max-width: 800px) {
@@ -122,9 +117,11 @@
             flex-wrap: wrap;
             .description {
                 text-align: justify;
+                border: none;
             }
             .description, .icons {
                 width: 100%;
+                padding-right: 0;
             }
         }
     }
