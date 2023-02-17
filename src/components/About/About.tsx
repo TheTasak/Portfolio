@@ -26,10 +26,10 @@ const experienceData =
         position: "Junior Business Systems Specialist",
         company: "Adamed Pharma S.A.",
         started: "2022-06-01T00:00:00.000Z",
-        finished: "2023-10-01T00:00:00.000Z",
+        finished: "2022-10-01T00:00:00.000Z",
         description: "lorem ipsum",
         technologies: [
-            "Php", "Javascript", "OracleSQL", "Css"
+            "PHP", "Javascript", "SQL", "Css"
         ]
     },
     {
@@ -38,7 +38,7 @@ const experienceData =
         company: "Ibac sp. z o.o.",
         started: "2020-11-01T00:00:00.000Z",
         finished: "2022-04-01T00:00:00.000Z",
-        description: "lorem ipsum",
+        description: "Created online store websites using Shopify and wrote for them custom plugins, also",
         technologies: []
     }
 ];
@@ -57,8 +57,8 @@ const About = () => {
                             <li>Fantasy and Sci-Fi literature</li>
                         </span>
                     </div>
-                    <div className="icons">
-                        <h5 className="icon-group-heading hidden">
+                    <div className="icons hidden">
+                        <h5 className="icon-group-heading">
                             Frontend
                         </h5>
                         <div className="icon-group">
@@ -68,7 +68,7 @@ const About = () => {
                             <Icon icon="Css"/>
                             <Icon icon="Sass"/>
                         </div>
-                        <h5 className="icon-group-heading hidden">
+                        <h5 className="icon-group-heading">
                             Backend
                         </h5>    
                         <div className="icon-group">
@@ -76,7 +76,7 @@ const About = () => {
                             <Icon icon="Rails"/>
                             <Icon icon="RSpec"/>
                         </div>
-                        <h5 className="icon-group-heading hidden">
+                        <h5 className="icon-group-heading">
                             Miscellaneous
                         </h5>   
                         <div className="icon-group">
@@ -87,7 +87,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <div className="experience">
+            <div className="experience-group">
                 {
                     experienceData.map(experience => <Experience key={experience.id} data={experience} />)
                 }

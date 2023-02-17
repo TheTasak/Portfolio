@@ -24,22 +24,40 @@ const Experience = ({data}: {data: ExperienceData}) => {
             month: '2-digit',
             year: 'numeric'
         }).replace("/", ".") : "now";
-        return startDateString + "-" + endDateString;
+        return startDateString + " - " + endDateString;
     }
 
     return (
         <div className="experience-card">
-            <p>{data.position}</p>
-            <p>{createDates()}</p>
-            <p>{data.company}</p>
-            <div>
-                <p>{data.description}</p>
-            </div>
-            <div className="icons">
-                <div className="icon-group">
-                    {data.technologies.map((technology, index) => <Icon icon={technology} key={Date.now() + index} />)}
+            <div className="card-header">
+                <div className="position">
+                    <span>
+                        {data.position}
+                    </span>
+                    <span>
+                        {" - "}
+                    </span>
+                    <span>
+                        {data.company}
+                    </span>
+                </div>
+                <div className="date">
+                    <p>{createDates()}</p>
                 </div>
             </div>
+            <div className="card-content">
+                <p>{data.description}</p>
+            </div>
+            { 
+                data.technologies.length > 0 && 
+                (
+                    <div className="icons">
+                        <div className="icon-group">
+                            {data.technologies.map((technology, index) => <Icon icon={technology} key={Date.now() + index} />)}
+                        </div>
+                    </div>
+                )
+            }
         </div>
     )
 }
