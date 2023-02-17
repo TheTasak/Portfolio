@@ -46,11 +46,11 @@ const experienceData =
 const About = () => {
 
     return (
-        <div className="about" id="about">
+        <section className="about" id="about">
             <div className="content-center">
                 <div className="content">
                     <div className="description hidden">
-                        <div className="text-header">About me</div>
+                        <h3 className="text-header">About me</h3>
                         <span>
                             {aboutDescription}
                             <li>Investing and finance</li>
@@ -58,9 +58,9 @@ const About = () => {
                         </span>
                     </div>
                     <div className="icons">
-                        <div className="icon-group-heading hidden">
+                        <h5 className="icon-group-heading hidden">
                             Frontend
-                        </div>
+                        </h5>
                         <div className="icon-group">
                             <Icon icon="Javascript"/>
                             <Icon icon="React"/>
@@ -68,17 +68,17 @@ const About = () => {
                             <Icon icon="Css"/>
                             <Icon icon="Sass"/>
                         </div>
-                        <div className="icon-group-heading hidden">
+                        <h5 className="icon-group-heading hidden">
                             Backend
-                        </div>    
+                        </h5>    
                         <div className="icon-group">
                             <Icon icon="PHP"/>
                             <Icon icon="Rails"/>
                             <Icon icon="RSpec"/>
                         </div>
-                        <div className="icon-group-heading hidden">
+                        <h5 className="icon-group-heading hidden">
                             Miscellaneous
-                        </div>   
+                        </h5>   
                         <div className="icon-group">
                             <Icon icon="Figma"/>
                             <Icon icon="Git"/>
@@ -92,7 +92,7 @@ const About = () => {
                     experienceData.map(experience => <Experience key={experience.id} data={experience} />)
                 }
             </div>
-        </div>
+        </section>
     )
 }
 

@@ -29,10 +29,12 @@ const Experience = ({data}: {data: ExperienceData}) => {
 
     return (
         <div className="experience-card">
-            <div>{data.position}</div>
-            <div>{createDates()}</div>
-            <div>{data.company}</div>
-            <div>{data.description}</div>
+            <p>{data.position}</p>
+            <p>{createDates()}</p>
+            <p>{data.company}</p>
+            <div>
+                <p>{data.description}</p>
+            </div>
             <div className="icons">
                 <div className="icon-group">
                     {data.technologies.map((technology, index) => <Icon icon={technology} key={Date.now() + index} />)}
