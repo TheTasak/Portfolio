@@ -8,10 +8,10 @@
     background: url("../../assets/waves2.svg");
     background-repeat: no-repeat;
     background-size: cover;
+    overflow-x: hidden;
 
     .content-center {
-        padding-top: 5vh;
-        padding-left: 4vw;
+        padding: 12vh 0 12vh 4vw;
     }
 
     .content {
@@ -38,12 +38,12 @@
             .text-header {
                 text-align: left;
                 font-family: 'Poppins';
-                font-size: clamp(26px, 2em, 42px);
+                font-size: clamp(30px, 2.5rem, 42px);
                 margin-bottom: 1.5em;
             }
 
             &.hidden {
-                transition: 1s opacity ease-in-out 1s, 1s transform ease-in-out 1s, 1s filter ease-in-out 1s;
+                transition: 1s opacity ease-in-out 0.5s, 1s transform ease-in-out 0.5s, 1s filter ease-in-out 0.5s;
                 transform: translateX(-25%);
                 filter: blur(4px);
             }
@@ -59,14 +59,14 @@
             &.hidden {
                 @for $i from 1 to 8 {
                     .icon-group-heading:nth-child(#{$i}) {
-                        transition: 1s opacity ease-in-out 1s + $i * 1s, 1.1s filter ease-in-out 1s + $i * 1s;
+                        transition: 1s opacity ease-in-out $i * 1s, 0.1s filter ease-in-out $i * 1s;
                         opacity: 0;
                         filter: blur(4px);
                     }
                     @for $j from 1 to 8 {
                         .icon-group:nth-child(#{$i}) {
                             .icon:nth-child(#{$j}) {
-                                transition: 1s opacity ease-in-out 1s + $i * 1s + $j * 0.25s, 1.1s filter ease-in-out 1s + $i * 1s + $j * 0.25s;
+                                transition: 1s opacity ease-in-out $i * 1s + $j * 0.25s, 0.1s filter ease-in-out $i * 1s + $j * 0.25s;
                                 opacity: 0;
                                 filter: blur(4px);
                             }
@@ -103,10 +103,56 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
         padding: 0 5vw;
         margin-top: 10vh;
         font-family: 'Montserrat';
 
+        .experience-card {
+            &.hidden {
+                filter: blur(4px);
+                opacity: 0;
+            }
+            &.hidden.show {
+                filter: blur(0);
+                opacity: 1;
+            }
+            &:nth-child(even) {
+                &.hidden {
+                    transition: 2s opacity ease-in-out 0.5s, 1.5s transform ease-in-out 0.5s, 2s filter ease-in-out 0.5s;
+                    transform: translateX(-50%);
+                }
+                &.hidden.show {
+                    transform: translateX(0);
+                }
+            }
+            &:nth-child(odd) {
+                &.hidden {
+                    transition: 2s opacity ease-in-out 0.5s, 1.5s transform ease-in-out 0.5s, 2s filter ease-in-out 0.5s;
+                    transform: translateX(50%);
+                }
+                &.hidden.show {
+                    transform: translateX(0);
+                }
+            }
+        }
+    }
+
+    @media (min-width: 1600px) {
+        .experience-group {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 1fr;
+            row-gap: 1em;
+            column-gap: 1.25em;
+            align-items: start;
+
+            .experience-card {
+                height: 90%;
+                width: auto;
+                position: relative;
+            }
+        }
     }
 
     @media (max-width: 800px) {

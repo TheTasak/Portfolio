@@ -28,7 +28,7 @@ const Experience = ({data}: {data: ExperienceData}) => {
     }
 
     return (
-        <div className="experience-card">
+        <div className="experience-card hidden">
             <div className="card-header">
                 <div className="position">
                     <span>
@@ -46,7 +46,7 @@ const Experience = ({data}: {data: ExperienceData}) => {
                 </div>
             </div>
             <div className="card-content">
-                <p>{data.description}</p>
+                <span>{data.description}</span>
             </div>
             { 
                 data.technologies.length > 0 && 

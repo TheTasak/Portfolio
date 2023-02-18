@@ -4,14 +4,14 @@
     width: min(75vw, 1000px);
     background-color: rgba($color: #979797, $alpha: 0.2);
     border-radius: 1.5em;
-    padding: 1em 1.5em;
-    margin-bottom: 1em;
+    padding: 1em 1.5em 1vh 1.5em;
+    margin-bottom: 1.5em;
     
     .card-header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin-bottom: 0.75em;
+        margin-bottom: 1em;
 
         .position {
             font-weight: 600;
@@ -19,17 +19,32 @@
         }
         .date {
             font-size: clamp(16px, 1em, 20px);
+            text-align: end;
         }
     }
     .card-content {
         font-size: clamp(16px, 0.8em, 20px);
+        white-space: pre-line;
     }
     .icons {
-        margin-top: 0.75em;
+        margin-top: 0.5em;
     }
     @media (max-width: 800px) {
         .card-header {
             flex-direction: column;
+        }
+    }
+    @media (min-width: 1600px) {
+        .card-content {
+            margin-bottom: 5em;
+        }
+
+        .icons {
+            position: absolute;
+            width: 90%;
+            bottom: 1.25vh;
+            left: 50%;
+            transform: translateX(-50%);
         }
     }
 }
