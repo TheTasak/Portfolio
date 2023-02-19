@@ -2,7 +2,7 @@
 
 .about {
     min-height: 100vh;
-    padding: 8rem 2.5rem;
+    padding: 7rem 2.5rem 0 2.5rem;
     color: $mainFontColor;
     
     background: url("../../assets/waves2.svg");
@@ -35,13 +35,6 @@
                 white-space: pre-line;
             }
 
-            .text-header {
-                text-align: left;
-                font-family: 'Poppins';
-                font-size: clamp(30px, 2.5rem, 42px);
-                margin-bottom: 1.5em;
-            }
-
             &.hidden {
                 transition: 1s opacity ease-in-out 0.5s, 1s transform ease-in-out 0.5s, 1s filter ease-in-out 0.5s;
                 transform: translateX(-25%);
@@ -55,18 +48,17 @@
         .icons {
             width: max(50%, 500px);
             padding-right: 3vw;
-            margin-top: 0.5em;
             &.hidden {
                 @for $i from 1 to 8 {
                     .icon-group-heading:nth-child(#{$i}) {
-                        transition: 1s opacity ease-in-out $i * 1s, 0.1s filter ease-in-out $i * 1s;
+                        transition: 1s opacity ease-in-out $i * 0.8s, 0.1s filter ease-in-out $i * 0.8s;
                         opacity: 0;
                         filter: blur(4px);
                     }
                     @for $j from 1 to 8 {
                         .icon-group:nth-child(#{$i}) {
                             .icon:nth-child(#{$j}) {
-                                transition: 1s opacity ease-in-out $i * 1s + $j * 0.25s, 0.1s filter ease-in-out $i * 1s + $j * 0.25s;
+                                transition: 1s opacity ease-in-out $i * 0.7s + $j * 0.3s, 0.1s filter ease-in-out $i * 0.7s + $j * 0.3s, 0.75s background-color ease-in-out;
                                 opacity: 0;
                                 filter: blur(4px);
                             }
@@ -93,64 +85,9 @@
            
             .icon-group-heading {
                 font-size: clamp(20px, 0.4em, 26px);
+                font-weight: 500;
+                font-family: 'Montserrat';
                 letter-spacing: 0.05em;
-            }
-        }
-
-    }
-
-    .experience-group {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        padding: 0 5vw;
-        margin-top: 10vh;
-        font-family: 'Montserrat';
-
-        .experience-card {
-            &.hidden {
-                filter: blur(4px);
-                opacity: 0;
-            }
-            &.hidden.show {
-                filter: blur(0);
-                opacity: 1;
-            }
-            &:nth-child(even) {
-                &.hidden {
-                    transition: 2s opacity ease-in-out 0.5s, 1.5s transform ease-in-out 0.5s, 2s filter ease-in-out 0.5s;
-                    transform: translateX(-50%);
-                }
-                &.hidden.show {
-                    transform: translateX(0);
-                }
-            }
-            &:nth-child(odd) {
-                &.hidden {
-                    transition: 2s opacity ease-in-out 0.5s, 1.5s transform ease-in-out 0.5s, 2s filter ease-in-out 0.5s;
-                    transform: translateX(50%);
-                }
-                &.hidden.show {
-                    transform: translateX(0);
-                }
-            }
-        }
-    }
-
-    @media (min-width: 1600px) {
-        .experience-group {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-auto-rows: 1fr;
-            row-gap: 1em;
-            column-gap: 1.25em;
-            align-items: start;
-
-            .experience-card {
-                height: 90%;
-                width: auto;
-                position: relative;
             }
         }
     }
@@ -164,6 +101,10 @@
             .description {
                 text-align: justify;
                 border: none;
+                .about-header {
+                    display: flex;
+                    justify-content: center;
+                }
             }
             .description, .icons {
                 width: 100%;
