@@ -11,7 +11,7 @@ interface ExperienceData {
     technologies: string[]
 }
 
-const Experience = ({data}: {data: ExperienceData}) => {
+const ExperienceCard = ({data}: {data: ExperienceData}) => {
     const createDates = () => {
         const startDate = new Date(data.started);
         const endDate = data.finished ? new Date(data.finished) : null;
@@ -28,7 +28,7 @@ const Experience = ({data}: {data: ExperienceData}) => {
     }
 
     return (
-        <div className="experience-card">
+        <div className="experience-card hidden">
             <div className="card-header">
                 <div className="position">
                     <span>
@@ -42,11 +42,11 @@ const Experience = ({data}: {data: ExperienceData}) => {
                     </span>
                 </div>
                 <div className="date">
-                    <p>{createDates()}</p>
+                    <span>{createDates()}</span>
                 </div>
             </div>
             <div className="card-content">
-                <p>{data.description}</p>
+                <span>{data.description}</span>
             </div>
             { 
                 data.technologies.length > 0 && 
@@ -62,4 +62,4 @@ const Experience = ({data}: {data: ExperienceData}) => {
     )
 }
 
-export default Experience;
+export default ExperienceCard;
