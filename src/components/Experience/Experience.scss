@@ -1,14 +1,7 @@
 @import '../../variables.scss';
 
 .experience {
-    min-height: 100vh;
-    padding: 4rem 1.5rem 15rem 1.5rem;
-    color: $mainFontColor;
-    
     background: url("../../assets/waves3.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow-x: hidden;
 
     .experience-header {
         display: flex;

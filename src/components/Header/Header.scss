@@ -95,4 +95,9 @@
             filter: drop-shadow(2px 2px 6px  $textShadowColor);
         }
     }
+    @media (max-width: 800px) {
+        .content-center > .text-main {
+            font-weight: 400;
+        }
+    }
 }

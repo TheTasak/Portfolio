@@ -32,6 +32,15 @@ body {
   .hidden.show {
     opacity: 1;
   }
+  .section {
+    min-height: 100vh;
+    padding: 6rem 1.5rem 0 1.5rem;
+    color: $mainFontColor;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+  }
   .icons {
     .icon-group {
         width: 100%;

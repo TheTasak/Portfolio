@@ -1,0 +1,23 @@
+@import '../../variables.scss';
+
+.projects {
+    background: url("../../assets/waves3.svg");
+
+    .projects-header {
+        display: flex;
+        justify-content: center;
+        .text-header {
+            &.hidden {
+                transition: 2s opacity ease-in-out 0.33s, 1.5s transform ease-in-out 0.33s, 2s filter ease-in-out 0.33s;
+                opacity: 0;
+                transform: translateX(-75%);
+                filter: blur(4px);
+            }
+            &.hidden.show {
+                opacity: 1;
+                transform: translateX(0);
+                filter: blur(0);
+            }
+        }
+    }
+}

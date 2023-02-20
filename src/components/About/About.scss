@@ -1,14 +1,7 @@
 @import '../../variables.scss';
 
 .about {
-    min-height: 100vh;
-    padding: 7rem 2.5rem 0 2.5rem;
-    color: $mainFontColor;
-    
     background: url("../../assets/waves2.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow-x: hidden;
 
     .content-center {
         padding: 12vh 0 12vh 4vw;
