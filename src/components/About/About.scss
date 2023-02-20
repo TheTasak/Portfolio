@@ -91,9 +91,11 @@
         }
         .content {
             flex-wrap: wrap;
+            
             .description {
                 text-align: justify;
                 border: none;
+
                 .about-header {
                     display: flex;
                     justify-content: center;

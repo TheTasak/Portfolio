@@ -12,18 +12,22 @@ interface ExperienceData {
 }
 
 const ExperienceCard = ({data}: {data: ExperienceData}) => {
+
     const createDates = () => {
         const startDate = new Date(data.started);
         const endDate = data.finished ? new Date(data.finished) : null;
+
         const startDateString = startDate.toLocaleDateString("en-GB", {
             month: '2-digit',
             year: 'numeric'
         }).replace("/", ".");
+        
         const endDateString = endDate ? 
         endDate.toLocaleDateString("en-GB", {
             month: '2-digit',
             year: 'numeric'
         }).replace("/", ".") : "now";
+
         return startDateString + " - " + endDateString;
     }
 

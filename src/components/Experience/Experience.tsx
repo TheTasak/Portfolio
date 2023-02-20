@@ -2,7 +2,6 @@ import TextHeader from '../Utilities/TextHeader';
 import './Experience.scss';
 import ExperienceCard from './ExperienceCard';
 
-
 const experienceData = 
 [
     {
