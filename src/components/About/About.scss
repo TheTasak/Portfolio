@@ -85,7 +85,7 @@
         }
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: $mobileView) {
         .content-center {
             padding-left: 0;
         }

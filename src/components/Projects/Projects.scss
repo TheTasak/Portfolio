@@ -6,6 +6,7 @@
     .projects-header {
         display: flex;
         justify-content: center;
+        margin-bottom: 2em;
         .text-header {
             &.hidden {
                 transition: 2s opacity ease-in-out 0.33s, 1.5s transform ease-in-out 0.33s, 2s filter ease-in-out 0.33s;
@@ -17,6 +18,33 @@
                 opacity: 1;
                 transform: translateX(0);
                 filter: blur(0);
+            }
+        }
+    }
+
+    .project-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0 5vw;
+        column-gap: 2vw;
+        align-items: center;
+        margin-bottom: 4em;
+
+        .img {
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+        .content {
+            .content-header {
+                text-align: right;
+                font-size: clamp(24px, 1.5em, 36px);
+                font-weight: 500;
+                margin-bottom: 1em;
+            }
+            .description {
+                text-align: justify;
             }
         }
     }
