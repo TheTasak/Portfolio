@@ -1,14 +1,7 @@
 @import '../../variables.scss';
 
 .experience {
-    min-height: 100vh;
-    padding: 4rem 1.5rem 15rem 1.5rem;
-    color: $mainFontColor;
-    
     background: url("../../assets/waves3.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow-x: hidden;
 
     .experience-header {
         display: flex;
@@ -44,14 +37,42 @@
         border-radius: 1.5em;
         padding: 1em 1.5em 1vh 1.5em;
         margin-bottom: 1.5em;
+        
+        .card-header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 1em;
     
+            .position {
+                font-weight: 600;
+                font-size: clamp(18px, 1.2em, 20px);
+                width: fit-content;
+            }
+            .date {
+                font-size: clamp(16px, 1em, 20px);
+                text-align: end;
+                width: fit-content;
+            }
+        }
+
+        .card-content {
+            font-size: clamp(16px, 0.8em, 20px);
+            white-space: pre-line;
+        }
+
+        .icons {
+            margin-top: 0.5em;
+            .icon {
+                transition: 0.75s background-color ease-in-out;
+            }
+        }
+
         &.hidden {
             filter: blur(4px);
-            opacity: 0;
         }
         &.hidden.show {
             filter: blur(0);
-            opacity: 1;
         }
         &:nth-child(even) {
             &.hidden {
@@ -71,42 +92,14 @@
                 transform: translateX(0);
             }
         }
-        
-        .card-header {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin-bottom: 1em;
-    
-            .position {
-                font-weight: 600;
-                font-size: clamp(18px, 1.2em, 20px);
-                width: fit-content;
-            }
-            .date {
-                font-size: clamp(16px, 1em, 20px);
-                text-align: end;
-                width: fit-content;
-            }
-        }
-        .card-content {
-            font-size: clamp(16px, 0.8em, 20px);
-            white-space: pre-line;
-        }
-        .icons {
-            margin-top: 0.5em;
-            .icon {
-                transition: 0.75s background-color ease-in-out;
-            }
-        }
     }
     
-    @media (max-width: 800px) {
+    @media (max-width: $mobileView) {
         .card-header {
             flex-direction: column;
         }
     }
-    @media (min-width: 1600px) {
+    @media (min-width: $landscapeView) {
         .experience-group {
             display: grid;
             grid-template-columns: repeat(3, 1fr);

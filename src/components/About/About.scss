@@ -1,17 +1,10 @@
 @import '../../variables.scss';
 
 .about {
-    min-height: 100vh;
-    padding: 7rem 2.5rem 0 2.5rem;
-    color: $mainFontColor;
-    
     background: url("../../assets/waves2.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow-x: hidden;
 
     .content-center {
-        padding: 12vh 0 12vh 4vw;
+        padding: 6vh 0 12vh 4vw;
     }
 
     .content {
@@ -92,15 +85,17 @@
         }
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: $mobileView) {
         .content-center {
             padding-left: 0;
         }
         .content {
             flex-wrap: wrap;
+            
             .description {
                 text-align: justify;
                 border: none;
+
                 .about-header {
                     display: flex;
                     justify-content: center;

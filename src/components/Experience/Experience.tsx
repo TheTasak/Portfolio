@@ -2,7 +2,6 @@ import TextHeader from '../Utilities/TextHeader';
 import './Experience.scss';
 import ExperienceCard from './ExperienceCard';
 
-
 const experienceData = 
 [
     {
@@ -40,7 +39,7 @@ const experienceData =
 
 const Experience = () => {
     return (
-        <section className='experience'>
+        <section className='experience section'>
             <div className='experience-header'>
                 <TextHeader>EXPERIENCE</TextHeader>
             </div>
