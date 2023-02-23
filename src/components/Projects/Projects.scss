@@ -25,26 +25,75 @@
     .project-card {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        padding: 0 5vw;
-        column-gap: 2vw;
+        padding: 0 5vw 2em 5vw;
+        column-gap: 5vw;
         align-items: center;
         margin-bottom: 4em;
+
+        &.card-left {
+            .img {
+                order: 1;
+            }
+            .content {
+                order: -1;
+                .content-header {
+                    text-align: left;
+                }
+            }
+        }
+
+        &.card-right {
+            .img {
+                order: -1;
+            }
+            .content {
+                order: 1;
+                .content-header {
+                    text-align: right;
+                }
+            }
+        }
 
         .img {
             img {
                 max-width: 100%;
                 max-height: 100%;
+                border-radius: 5px;
+                box-shadow: 6px 4px 6px 4px rgba($color: #000000, $alpha: 0.4);
             }
         }
         .content {
             .content-header {
-                text-align: right;
-                font-size: clamp(24px, 1.5em, 36px);
+                font-size: clamp(24px, 1.75em, 36px);
                 font-weight: 500;
                 margin-bottom: 1em;
             }
             .description {
                 text-align: justify;
+                font-family: 'Montserrat';
+                font-size: clamp(16px, 0.8em, 20px);
+                margin-bottom: 1em;
+            }
+        }
+    }
+
+    @media (max-width: $landscapeView) {
+        .project-card {
+            display: block;
+
+            .img {
+                margin-bottom: 1em;
+            }
+            
+            .content {
+                .content-header {
+                    text-align: center !important;
+                }
+            }
+            border-bottom: 3px solid $mainFontColor;
+
+            &:last-of-type {
+                border: none;
             }
         }
     }

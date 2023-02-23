@@ -11,10 +11,10 @@ interface ProjectData {
     technologies: string[],
 }
 
-const ProjectCard = ({data}: {data: ProjectData}) => {
-    console.log(data.photoUrl)
+const ProjectCard = ({data, side}: {data: ProjectData, side: string}) => {
+    
     return (
-        <div className="project-card hidden">
+        <div className={"project-card hidden " + "card-" + side}>
             <div className="img">
                 <img src={data.photoUrl} alt={"Image of " + data.title} />
             </div>
