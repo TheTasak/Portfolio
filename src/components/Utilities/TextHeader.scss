@@ -4,16 +4,17 @@
     font-family: 'Montserrat';
     font-size: clamp(30px, 2.5rem, 42px);
     margin-bottom: 1.25em;
-}
-.text-header.hidden::after {
-    content: '';
-    display: block;
-    padding: 0 1em 10px 1em;
-    border-bottom: 3px solid white;
-    transform: scaleX(0);
-    transition: transform 0.75s ease-in-out 2s;
-    transform-origin: 0% 50%;
-}
-.text-header.hidden.show::after {
-    transform: scaleX(1);
+
+    &.hidden::after {
+        transition: transform 0.75s ease-in-out 2s;
+        content: '';
+        display: block;
+        padding: 0 1em 10px 1em;
+        border-bottom: 3px solid white;
+        transform: scaleX(0);
+        transform-origin: 0% 50%;
+    }
+    &.hidden.show::after {
+        transform: scaleX(1);
+    }
 }
