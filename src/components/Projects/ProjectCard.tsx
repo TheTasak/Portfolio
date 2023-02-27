@@ -16,7 +16,7 @@ const ProjectCard = ({data, side}: {data: ProjectData, side: string}) => {
     return (
         <div className={"project-card hidden " + "card-" + side}>
             <div className="img">
-                <img src={data.photoUrl} alt={"Image of " + data.title} />
+                <img src={new URL(data.photoUrl, import.meta.url).href} alt={"Image of " + data.title} />
             </div>
             <div className="content">
                 <div className="content-header">
