@@ -1,0 +1,11 @@
+@import '../../variables.scss';
+
+footer {
+    color: $mainFontColor;
+    text-align: center;
+    padding: 0.5rem 0;
+    font-weight: 300;
+    font-size: clamp(18px, 1rem, 22px);
+    background-color: #6f60c4;
+    letter-spacing: 0.05em;
+}

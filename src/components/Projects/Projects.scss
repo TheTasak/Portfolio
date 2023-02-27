@@ -59,7 +59,7 @@
                 max-width: 100%;
                 max-height: 100%;
                 border-radius: 5px;
-                box-shadow: 6px 4px 6px 4px rgba($color: #000000, $alpha: 0.4);
+                box-shadow: 4px 4px 10px 4px rgba($color: #000000, $alpha: 0.2);
             }
         }
         .content {
@@ -73,6 +73,33 @@
                 font-family: 'Montserrat';
                 font-size: clamp(16px, 0.8em, 20px);
                 margin-bottom: 1em;
+            }
+        }
+
+        &.hidden {
+            .img {
+                transition: 1.5s opacity ease-in-out 1.5s, 1.33s transform ease-in-out 1.5s, 1.33s filter ease-in-out 1.5s;
+                transform: translateX(-25%);
+                filter: blur(4px);
+                opacity: 0;
+            }
+            .content {
+                transition: 1.5s opacity ease-in-out 0.33s, 1.33s transform ease-in-out 0.33s, 1.33s filter ease-in-out 0.33s;
+                transform: translateX(-25%);
+                filter: blur(4px);
+                opacity: 0;
+            }
+        }
+        &.hidden.show {
+            .img {
+                opacity: 1;
+                transform: translateX(0);
+                filter: blur(0);
+            }
+            .content {
+                opacity: 1;
+                transform: translateX(0);
+                filter: blur(0);
             }
         }
     }
@@ -90,10 +117,25 @@
                     text-align: center !important;
                 }
             }
-            border-bottom: 3px solid $mainFontColor;
+            border-bottom: 3px solid rgba($color: $mainFontColor, $alpha: 0.8);
 
             &:last-of-type {
                 border: none;
+            }
+
+            &.hidden {
+                transition: 1s opacity ease-in-out;
+                opacity: 0;
+                .img {
+                    transition: 1.5s opacity ease-in-out 0.33s, 1.33s transform ease-in-out 0.33s, 1.33s filter ease-in-out 0.33s; 
+                }
+
+                .content {
+                    transition: 1.5s opacity ease-in-out 1.5s, 1.33s transform ease-in-out 1.5s, 1.33s filter ease-in-out 1.5s;
+                }
+            }
+            &.hidden.show {
+                opacity: 1;
             }
         }
     }
