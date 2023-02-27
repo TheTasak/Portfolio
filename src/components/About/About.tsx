@@ -12,6 +12,8 @@ const About = () => {
 
     return (
         <section className="about section" id="about">
+            <div className="background">
+            </div>
             <div className="content-center">
                 <div className="content">
                     <div className="description hidden">

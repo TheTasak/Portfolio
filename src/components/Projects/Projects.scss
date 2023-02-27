@@ -1,7 +1,13 @@
 @import '../../variables.scss';
 
 .projects {
-    background: url("../../assets/waves4.svg");
+    .background {
+        background-image: url("../../assets/waves4.svg");
+    }
+    
+    .project-group {
+        padding-bottom: 6rem;
+    }
 
     .projects-header {
         display: flex;
@@ -117,7 +123,7 @@
                     text-align: center !important;
                 }
             }
-            border-bottom: 3px solid rgba($color: $mainFontColor, $alpha: 0.8);
+            border-bottom: 3px solid rgba($color: $mainFontColor, $alpha: 0.6);
 
             &:last-of-type {
                 border: none;

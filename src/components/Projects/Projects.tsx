@@ -43,6 +43,8 @@ const projectData =
 const Projects = () => {
     return (
         <section className='projects section'>
+            <div className='background'>
+            </div>
             <div className='projects-header'>
                 <TextHeader>PROJECTS</TextHeader>
             </div>
