@@ -8,6 +8,8 @@ const Header = () => {
 
     return (
         <section className="header box-center">
+            <div className='background'>
+            </div>
             <div className="content-center">
                 <h1 className="text-main">Przemysław Tasarz</h1>
                 <h2 className="text-sub">Full-Stack Developer</h2>

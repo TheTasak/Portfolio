@@ -1,7 +1,9 @@
 @import '../../variables.scss';
 
 .about {
-    background: url("../../assets/waves2.svg");
+    .background {
+        background-image: url("../../assets/waves2.svg");
+    }
 
     .content-center {
         padding: 6vh 0 12vh 4vw;

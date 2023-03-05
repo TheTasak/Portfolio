@@ -24,7 +24,7 @@ const projectData =
         githubUrl: 'https://github.com/TheTasak/Bookemia',
         demoUrl: '',
         technologies: [
-            "React", "SQL"
+            "React", "Rails", "RSpec", "Sass"
         ]
     },
     {
@@ -35,7 +35,7 @@ const projectData =
         githubUrl: 'https://github.com/TheTasak/Bookemia',
         demoUrl: '',
         technologies: [
-            "React", "SQL"
+            "PHP", "SQL"
         ]
     },
 ];
@@ -43,6 +43,8 @@ const projectData =
 const Projects = () => {
     return (
         <section className='projects section'>
+            <div className='background'>
+            </div>
             <div className='projects-header'>
                 <TextHeader>PROJECTS</TextHeader>
             </div>
