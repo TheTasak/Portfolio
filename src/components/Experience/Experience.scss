@@ -1,8 +1,10 @@
 @import '../../variables.scss';
 
 .experience {
+    min-height: 100vh !important;
+
     .background {
-        background-image: url("../../assets/waves3.svg");
+        background-image: url("../../assets/waves2.svg");
     }
 
     .experience-header {

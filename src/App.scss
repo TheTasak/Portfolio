@@ -6,6 +6,11 @@ body {
   .App {
     width: 100%;
   }
+
+  .bold {
+    font-weight: 500;
+  }
+
   .box-center {
     display: flex;
     flex-direction: row;
@@ -35,7 +40,7 @@ body {
 
   .section {
     position: relative;
-    min-height: 100vh;
+    min-height: 50vh;
     padding: 10rem 2.5rem 0 2.5rem;
     color: $mainFontColor;
     
